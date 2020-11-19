@@ -1,0 +1,15 @@
+@@grammar::LogicalOperator
+@@ignorecase :: True
+
+start = expression $;
+
+expression =
+	| value:boolean
+	| func:and_
+	| func:or_
+	;
+
+boolean = "true" | "false";
+
+and_ = name:"and_" "(" expressions+:expression { "," expressions+:expression } ")";
+or_ = name:"or_" "(" expressions+:expression { "," expressions+:expression } ")";

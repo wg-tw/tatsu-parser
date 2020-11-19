@@ -1,0 +1,17 @@
+[tool.black]
+line-length = 120
+target-version = ['py36']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+| \.mypy_cache
+| \.venv
+| \.pytest_cache
+| \.tox
+| tatsu_parser.egg-info
+| _build
+| build
+| dist
+)/
+'''
