@@ -26,4 +26,4 @@ jobs:
         github-token: ${{ github.token }}
         webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
         card-layout-start: cozy
-        card-layout-end: cozy
+        card-layout-exit: cozy
