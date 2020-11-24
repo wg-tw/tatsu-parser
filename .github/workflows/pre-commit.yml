@@ -21,3 +21,9 @@ jobs:
       run: pip install --upgrade tox virtualenv setuptools pip
     - name: run tox
       run: tox -e py
+    - uses: toko-bifrost/ms-teams-deploy-card@master
+      with:
+        github-token: ${{ github.token }}
+        webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
+        card-layout-start: cozy
+        card-layout-end: cozy
